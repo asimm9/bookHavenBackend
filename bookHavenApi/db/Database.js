@@ -16,7 +16,7 @@ class Database{
     async  connect(options) {
         try {
             console.log("Connectting.....");
-            let db = mongoose.connect("mongodb://127.0.0.1:27017/bookHaven",{useNewUrlParser: true, useUnifiedTopology: true });
+            let db = mongoose.connect("mongodb://127.0.0.1:27017/bookHaven",/* {useNewUrlParser: true, useUnifiedTopology: true } */);
             
             this.mongoConnection = db;
             console.log("Connected!!");
@@ -26,3 +26,5 @@ class Database{
         }
     }
 }
+
+module.exports = Database;
