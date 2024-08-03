@@ -1,16 +1,17 @@
 const { type } = require('express/lib/response');
 const mongoose = require('mongoose');
 const Users = require('./Users');
+const Review = require('./Review');
 
 
 const schema = mongoose.Schema({
     title:  {type: mongoose.SchemaTypes.String, required:true},
-    author:  {type: mongoose.SchemaTypes.ObjectId, required:true, ref: Users},
+    author:  {type: mongoose.SchemaTypes.ObjectId, required:true},
     genre:  {type: mongoose.SchemaTypes.String, required:true},
     description:  {type: mongoose.SchemaTypes.String, required:false},
     coverImage:  {type: mongoose.SchemaTypes.String, required:false},
     publishedDate:  {type: mongoose.SchemaTypes.Date, required:false},
-    ratings:  {type: mongoose.SchemaTypes.Array, ref:Review},
+    ratings:  {type: mongoose.SchemaTypes.Array},
 },{
     versionKey: false,
     timestamps: {

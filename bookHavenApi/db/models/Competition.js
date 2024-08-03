@@ -8,7 +8,7 @@ const schema = mongoose.Schema({
     description: {type: mongoose.SchemaTypes.String, required:false},
     startDate: {type: mongoose.SchemaTypes.Date, required:true},
     endDate: {type: mongoose.SchemaTypes.Date, required:true},
-    participants: {type: mongoose.SchemaTypes.Array, required:false,ref: Users},
+    participants: {type: mongoose.SchemaTypes.Array, required:false},
 },{
     versionKey: false,
     timestamps: {

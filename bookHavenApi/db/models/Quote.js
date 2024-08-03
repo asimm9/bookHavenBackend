@@ -5,8 +5,8 @@ const Book = require('./Book');
 
 
 const schema = mongoose.Schema({
-    user: {type: mongoose.SchemaTypes.ObjectId, required:true, ref: Users},
-    book: {type: mongoose.SchemaTypes.ObjectId, required:true, ref: Book},
+    user: {type: mongoose.SchemaTypes.ObjectId, required:true},
+    book: {type: mongoose.SchemaTypes.ObjectId, required:true},
     page: {type: mongoose.SchemaTypes.Number, required:false},
     quoteText: {type: mongoose.SchemaTypes.String, required:true}
 },{
