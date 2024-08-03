@@ -7,7 +7,7 @@ const schema = mongoose.Schema({
     name: {type: mongoose.SchemaTypes.String, required:true},
     biography: {type: mongoose.SchemaTypes.String, required:false}, 
     birthDate: {type: mongoose.SchemaTypes.Date, required:false},
-    books: {type: mongoose.SchemaTypes.Array, required:false,ref: Book},
+    books: {type: mongoose.SchemaTypes.Array, required:false},
 
 },{
     versionKey: false,

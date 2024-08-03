@@ -6,9 +6,9 @@ const Book = require('./Book');
 
 
 const schema = mongoose.Schema({
-    user: {type: mongoose.SchemaTypes.ObjectId, required:true, Users}, 
+    user: {type: mongoose.SchemaTypes.ObjectId, required:true}, 
     title: {type: mongoose.SchemaTypes.String, required:true}, 
-    books: {type: mongoose.SchemaTypes.Array, required:false,ref: Book},
+    books: {type: mongoose.SchemaTypes.Array, required:false},
 },{
     versionKey: false,
     timestamps: {
